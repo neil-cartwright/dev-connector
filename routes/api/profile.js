@@ -52,7 +52,7 @@ router.post(
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({
-        errors: errors.array,
+        errors: errors.array(),
       });
     }
     const {
@@ -70,7 +70,7 @@ router.post(
       facebook,
     } = req.body;
 
-    // buld profile object
+    // build profile object
     const profileFields = {};
     profileFields.user = req.user.id;
     if (company) profileFields.company = company;
