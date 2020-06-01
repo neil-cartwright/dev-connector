@@ -1,10 +1,11 @@
 import React, {Fragment, useState} from "react";
 import {Link, Redirect} from "react-router-dom";
 import {connect} from "react-redux";
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
+import {setAlert} from "../../actions/alert";
 import {login} from "../../actions/auth";
 
-const Login = ({login, isAuthenticated}) => {
+const Login = ({setAlert, login, isAuthenticated}) => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -36,7 +37,6 @@ const Login = ({login, isAuthenticated}) => {
           onChange={(e) => onChange(e)}
           placeholder="Email Address"
           name="email"
-          required
         />
         <input
           value={password}
@@ -56,12 +56,11 @@ const Login = ({login, isAuthenticated}) => {
 };
 
 Login.propTypes = {
-  login: propTypes.func.isRequired,
-  // eslint-disable-next-line react/no-typos
-  isAuthenticated: propTypes.func.bool,
+  login: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool,
 };
 
 const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated,
 });
-export default connect(mapStateToProps, {login})(Login);
+export default connect(mapStateToProps, {setAlert, login})(Login);
