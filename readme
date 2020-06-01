@@ -1,19 +1,6 @@
-notes
+# dev connector
 
-routes 
+following "MERN STACK front to back - Node, React, Redux" from Udemy.
 
-auth routes
-
-/register user -- 
-/login user -- logs in user based on email/password returns a token?
-/get logged in user -- returns a token?
-/
-
-profiles routes // has middleware
-
-/create and update profiles
-/create a profile --must enter token in headers
-/delete a profile --each profile has an id
-/
 
 
