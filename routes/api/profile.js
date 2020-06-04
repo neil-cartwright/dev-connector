@@ -81,15 +81,9 @@ router.post(
     if (status) profileFields.status = status;
     if (githubusername) profileFields.githubusername = githubusername;
     if (skills) {
-      // edited from original version of course
-      Array.isArray(skills)
-        ? skills
-        : skills.split(",").map((skill) => skill.trim());
-
-      profileFields.skills = skills;
-      //
+      profileFields.skills = skills.split(",").map((skill) => skill.trim());
+      // re-edited from original version of course. glitchy
     }
-
     // build social object
 
     profileFields.social = {};

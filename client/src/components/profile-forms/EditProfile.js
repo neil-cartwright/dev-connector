@@ -46,7 +46,7 @@ const EditProfile = ({
       youtube: loading || !profile.social ? "" : profile.social.youtube,
       instagram: loading || !profile.social ? "" : profile.social.instagram,
     });
-  }, [loading]); // add getCurrentProfile to dependecies?
+  }, [loading, getCurrentProfile]); // add getCurrentProfile to dependecies?
 
   const {
     company,

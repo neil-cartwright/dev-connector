@@ -6,7 +6,6 @@ import {
   LOGIN_FAIL,
   LOGIN_SUCCESS,
   LOGOUT,
-  CLEAR_PROFILE,
   ACCOUNT_DELETED,
 } from "../actions/types";
 
