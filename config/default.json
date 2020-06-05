@@ -2,6 +2,7 @@
     "mongouri": "mongodb+srv://neil-cartwright:mongAdmiral315o@devconnector-y3hfe.mongodb.net/test?retryWrites=true&w=majority",
     "jwtsecret": "mysecrettoken",
     "githubClientId": "d791ec3ae80bda2aa3bb",
-    "githubSecret": "eebd077a0045bca223dca4bceaebd7909a7a60d7"
+    "githubSecret": "eebd077a0045bca223dca4bceaebd7909a7a60d7",
+    "githubToken": "d368df05d7d8fc4846185ba6ee1599f1a3165dc1"
 
 }
