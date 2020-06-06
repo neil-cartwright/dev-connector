@@ -8,8 +8,6 @@ import {
   ACCOUNT_DELETED,
   CLEAR_PROFILE,
   GET_REPOS,
-  ADD_COMMENT,
-  REMOVE_COMMENT,
 } from "./types";
 
 // get the current user's profile
