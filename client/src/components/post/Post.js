@@ -22,10 +22,15 @@ const Post = ({getPost, post: {post, loading}, match}) => {
       <PostItem post={post} showActions={false}></PostItem>
       <CommentForm postId={post._id}></CommentForm>
       <div className="comments">
-        {console.log(post.comments)}
-        {post.comments.map((comment) => (
-          <CommentItem key={comment._id} comment={comment} postId={post._id} />
-        ))}
+        {Array.isArray(post.comments)
+          ? post.comments.map((comment) => (
+              <CommentItem
+                key={comment._id}
+                comment={comment}
+                postId={post._id}
+              ></CommentItem>
+            ))
+          : window.location.reload(false)}
       </div>
     </Fragment>
   );
