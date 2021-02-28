@@ -15,6 +15,7 @@ const ProfileGithub = ({ username, getGithubRepos, repos }) => {
     <Spinner />
    ) : (
     repos.map((repo) => (
+     // change repo._id to repo.id on 28/02/21
      <div key={repo.id} className="repo bg-white p-1 my-1">
       <div>
        <h4>

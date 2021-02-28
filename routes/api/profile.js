@@ -83,16 +83,17 @@ router.post(
   if (githubusername) profileFields.githubusername = githubusername;
   if (skills) {
    profileFields.skills = skills.split(",").map((skill) => " " + skill.trim());
-   // re-edited from original version of course. glitchy
+   console.log(profileFields);
   }
-  // build social object
+  // form won't submit on first load until skills is updated
+  // will then submit on each submit press solution not found
 
   profileFields.social = {};
+  if (twitter) profileFields.social.twitter = twitter;
+  if (facebook) profileFields.social.facebook = facebook;
   if (youtube) profileFields.social.youtube = youtube;
-  if (twitter) profileFields.twitter = twitter;
-  if (facebook) profileFields.facebook = facebook;
-  if (linkedin) profileFields.linkedin = linkedin;
-  if (instagram) profileFields.instagram = instagram;
+  if (linkedin) profileFields.social.linkedin = linkedin;
+  if (instagram) profileFields.social.instagram = instagram;
 
   try {
    let profile = await Profile.findOne({
