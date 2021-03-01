@@ -84,8 +84,6 @@ router.post(
   if (skills) {
    profileFields.skills = skills.split(",").map((skill) => " " + skill.trim());
   }
-  // form won't submit on first load until skills is updated
-  // will then submit on each submit press solution not found
 
   profileFields.social = {};
   if (twitter) profileFields.social.twitter = twitter;
